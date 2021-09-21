@@ -1,0 +1,17 @@
+<h1>Alpha bloggers</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email ID</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+        <tr>
+            <td><%=link_to user.username, user %></td>
+            <td><%=link_to user.email, user %></td>
+        </tr>
+     <% end %>
+    </tbody>
+</table>
