@@ -24,9 +24,11 @@
      <% end %>
     </tbody>
 </table>
-<p>
-    <%=link_to "Create new Article",new_article_path %>
-</p>
+<% if logged_in?%>
+    <p>
+        <%=link_to "Create new Article",new_article_path %>
+    </p>
+<% end %>
 <hr>
 <% if logged_in? %>
     <%= link_to 'Logout',logout_path, method: :delete %>
